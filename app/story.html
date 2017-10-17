@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name=viewport>
+  <title>story</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper text_page">
+    <header class="header">
+      <a onclick="javascript:history.back(); return false;" class="back_history">
+        <img src="img/back.png" alt="Назад">
+      </a>
+      <div class="logo_text">INVESTMENT VIEWS</div>
+      <nav class="main_menu">
+        <div class="align">
+          <ul>
+            <li>
+              <a href="index.html" class="link to_index_page">HIGHLIGHTS</a>
+            </li>
+            <li>
+              <a href="story.html" class="link active">WHAT'S THE STORY?</a>
+            </li>
+            <li>
+              <a href="table.html" class="link to_table_page">INVESTMENT SOLUTIONS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="header_block cf">
+        <h1 class="header_page">What's the Story?</h1>
+      </div>
+      <div class="column">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, minima velit deserunt facere facilis fugiat placeat quibusdam eos repellendus recusandae, iure tenetur illum mollitia veniam at consectetur distinctio, quo quod!</p>
+          <div class="graph">
+            <div class="title">Equity market volatility is at multi-year lows</div>
+            <img src="img/graph.png" class="graph_img" alt="graph image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(function() {
+      var to_back = $('.wrapper'),
+        page_index = $('.to_index_page'),
+        page_table = $('.to_table_page');
+
+      to_back.on( "swiperight", swipeRightHandler );
+      function swipeRightHandler( event ){
+        $(location).attr('href', 'index.html');
+      }
+
+      page_index.on('click', function(){
+        $(location).attr('href', 'index.html');
+      });
+
+      page_table.on('click', function(){
+        $(location).attr('href', 'table.html');
+      });
+
+    });
+  </script>
+</body>
+</html>
